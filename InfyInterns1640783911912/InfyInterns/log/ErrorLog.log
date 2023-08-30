@@ -1,0 +1,600 @@
+08-Apr-2022 16:24:09 INFO - HV000001: Hibernate Validator 6.2.0.Final
+08-Apr-2022 16:24:09 INFO - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+08-Apr-2022 16:24:09 INFO - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+08-Apr-2022 16:24:09 INFO - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+08-Apr-2022 16:24:10 INFO - Finished Spring Data repository scanning in 44 ms. Found 2 JPA repository interfaces.
+08-Apr-2022 16:24:10 INFO - Tomcat initialized with port(s): 8766 (http)
+08-Apr-2022 16:24:10 INFO - Initializing ProtocolHandler ["http-nio-8766"]
+08-Apr-2022 16:24:10 INFO - Starting service [Tomcat]
+08-Apr-2022 16:24:10 INFO - Starting Servlet engine: [Apache Tomcat/9.0.56]
+08-Apr-2022 16:24:10 INFO - Initializing Spring embedded WebApplicationContext
+08-Apr-2022 16:24:10 INFO - Root WebApplicationContext: initialization completed in 1266 ms
+08-Apr-2022 16:24:10 INFO - HikariPool-1 - Starting...
+08-Apr-2022 16:24:11 INFO - HikariPool-1 - Start completed.
+08-Apr-2022 16:24:11 INFO - HHH000204: Processing PersistenceUnitInfo [name: default]
+08-Apr-2022 16:24:11 INFO - HHH000412: Hibernate ORM core version 5.6.3.Final
+08-Apr-2022 16:24:11 INFO - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+08-Apr-2022 16:24:11 INFO - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+08-Apr-2022 16:24:11 INFO - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+08-Apr-2022 16:24:11 INFO - Initialized JPA EntityManagerFactory for persistence unit 'default'
+08-Apr-2022 16:24:12 WARN - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+08-Apr-2022 16:24:12 INFO - LiveReload server is running on port 35729
+08-Apr-2022 16:24:12 INFO - Starting ProtocolHandler ["http-nio-8766"]
+08-Apr-2022 16:24:12 INFO - Tomcat started on port(s): 8766 (http) with context path ''
+08-Apr-2022 16:26:54 INFO - Initializing Spring DispatcherServlet 'dispatcherServlet'
+08-Apr-2022 16:26:54 INFO - Initializing Servlet 'dispatcherServlet'
+08-Apr-2022 16:26:54 INFO - Completed initialization in 1 ms
+08-Apr-2022 16:31:09 ERROR - Validation failed for argument [0] in public org.springframework.http.ResponseEntity<java.lang.String> com.infy.infyinterns.api.ProjectAllocationAPI.allocateProject(com.infy.infyinterns.dto.ProjectDTO) throws com.infy.infyinterns.exception.InfyInternException with 4 errors: [Field error in object 'projectDTO' on field 'ideaOwner': rejected value [null]; codes [NotNull.projectDTO.ideaOwner,NotNull.ideaOwner,NotNull.java.lang.Integer,NotNull]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [projectDTO.ideaOwner,ideaOwner]; arguments []; default message [ideaOwner]]; default message [Please provide idea owner name]] [Field error in object 'projectDTO' on field 'projectName': rejected value [null]; codes [NotNull.projectDTO.projectName,NotNull.projectName,NotNull.java.lang.String,NotNull]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [projectDTO.projectName,projectName]; arguments []; default message [projectName]]; default message [Please provide project name]] [Field error in object 'projectDTO' on field 'mentorDTO': rejected value [null]; codes [NotNull.projectDTO.mentorDTO,NotNull.mentorDTO,NotNull.com.infy.infyinterns.dto.MentorDTO,NotNull]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [projectDTO.mentorDTO,mentorDTO]; arguments []; default message [mentorDTO]]; default message [Please provide mentor details]] [Field error in object 'projectDTO' on field 'releaseDate': rejected value [null]; codes [NotNull.projectDTO.releaseDate,NotNull.releaseDate,NotNull.java.time.LocalDate,NotNull]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [projectDTO.releaseDate,releaseDate]; arguments []; default message [releaseDate]]; default message [Please provide project release date ]] 
+org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<java.lang.String> com.infy.infyinterns.api.ProjectAllocationAPI.allocateProject(com.infy.infyinterns.dto.ProjectDTO) throws com.infy.infyinterns.exception.InfyInternException with 4 errors: [Field error in object 'projectDTO' on field 'ideaOwner': rejected value [null]; codes [NotNull.projectDTO.ideaOwner,NotNull.ideaOwner,NotNull.java.lang.Integer,NotNull]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [projectDTO.ideaOwner,ideaOwner]; arguments []; default message [ideaOwner]]; default message [Please provide idea owner name]] [Field error in object 'projectDTO' on field 'projectName': rejected value [null]; codes [NotNull.projectDTO.projectName,NotNull.projectName,NotNull.java.lang.String,NotNull]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [projectDTO.projectName,projectName]; arguments []; default message [projectName]]; default message [Please provide project name]] [Field error in object 'projectDTO' on field 'mentorDTO': rejected value [null]; codes [NotNull.projectDTO.mentorDTO,NotNull.mentorDTO,NotNull.com.infy.infyinterns.dto.MentorDTO,NotNull]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [projectDTO.mentorDTO,mentorDTO]; arguments []; default message [mentorDTO]]; default message [Please provide mentor details]] [Field error in object 'projectDTO' on field 'releaseDate': rejected value [null]; codes [NotNull.projectDTO.releaseDate,NotNull.releaseDate,NotNull.java.time.LocalDate,NotNull]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [projectDTO.releaseDate,releaseDate]; arguments []; default message [releaseDate]]; default message [Please provide project release date ]] 
+	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.resolveArgument(RequestResponseBodyMethodProcessor.java:141) ~[spring-webmvc-5.3.14.jar:5.3.14]
+	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:121) ~[spring-web-5.3.14.jar:5.3.14]
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:179) ~[spring-web-5.3.14.jar:5.3.14]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:146) ~[spring-web-5.3.14.jar:5.3.14]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-5.3.14.jar:5.3.14]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895) ~[spring-webmvc-5.3.14.jar:5.3.14]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) ~[spring-webmvc-5.3.14.jar:5.3.14]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.3.14.jar:5.3.14]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067) [spring-webmvc-5.3.14.jar:5.3.14]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963) [spring-webmvc-5.3.14.jar:5.3.14]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) [spring-webmvc-5.3.14.jar:5.3.14]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909) [spring-webmvc-5.3.14.jar:5.3.14]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:681) [tomcat-embed-core-9.0.56.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) [spring-webmvc-5.3.14.jar:5.3.14]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764) [tomcat-embed-core-9.0.56.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) [tomcat-embed-websocket-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) [spring-web-5.3.14.jar:5.3.14]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) [spring-web-5.3.14.jar:5.3.14]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) [spring-web-5.3.14.jar:5.3.14]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) [spring-web-5.3.14.jar:5.3.14]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) [spring-web-5.3.14.jar:5.3.14]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) [spring-web-5.3.14.jar:5.3.14]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:895) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1732) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at java.lang.Thread.run(Thread.java:833) [?:?]
+08-Apr-2022 16:31:09 WARN - Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<java.lang.String> com.infy.infyinterns.api.ProjectAllocationAPI.allocateProject(com.infy.infyinterns.dto.ProjectDTO) throws com.infy.infyinterns.exception.InfyInternException with 4 errors: [Field error in object 'projectDTO' on field 'ideaOwner': rejected value [null]; codes [NotNull.projectDTO.ideaOwner,NotNull.ideaOwner,NotNull.java.lang.Integer,NotNull]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [projectDTO.ideaOwner,ideaOwner]; arguments []; default message [ideaOwner]]; default message [Please provide idea owner name]] [Field error in object 'projectDTO' on field 'projectName': rejected value [null]; codes [NotNull.projectDTO.projectName,NotNull.projectName,NotNull.java.lang.String,NotNull]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [projectDTO.projectName,projectName]; arguments []; default message [projectName]]; default message [Please provide project name]] [Field error in object 'projectDTO' on field 'mentorDTO': rejected value [null]; codes [NotNull.projectDTO.mentorDTO,NotNull.mentorDTO,NotNull.com.infy.infyinterns.dto.MentorDTO,NotNull]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [projectDTO.mentorDTO,mentorDTO]; arguments []; default message [mentorDTO]]; default message [Please provide mentor details]] [Field error in object 'projectDTO' on field 'releaseDate': rejected value [null]; codes [NotNull.projectDTO.releaseDate,NotNull.releaseDate,NotNull.java.time.LocalDate,NotNull]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [projectDTO.releaseDate,releaseDate]; arguments []; default message [releaseDate]]; default message [Please provide project release date ]] ]
+08-Apr-2022 16:34:32 INFO - HV000001: Hibernate Validator 6.2.0.Final
+08-Apr-2022 16:34:32 INFO - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+08-Apr-2022 16:34:32 INFO - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+08-Apr-2022 16:34:32 INFO - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+08-Apr-2022 16:34:33 INFO - Finished Spring Data repository scanning in 43 ms. Found 2 JPA repository interfaces.
+08-Apr-2022 16:34:33 INFO - Tomcat initialized with port(s): 8766 (http)
+08-Apr-2022 16:34:33 INFO - Initializing ProtocolHandler ["http-nio-8766"]
+08-Apr-2022 16:34:33 INFO - Starting service [Tomcat]
+08-Apr-2022 16:34:33 INFO - Starting Servlet engine: [Apache Tomcat/9.0.56]
+08-Apr-2022 16:34:33 INFO - Initializing Spring embedded WebApplicationContext
+08-Apr-2022 16:34:33 INFO - Root WebApplicationContext: initialization completed in 1207 ms
+08-Apr-2022 16:34:33 INFO - HikariPool-1 - Starting...
+08-Apr-2022 16:34:34 INFO - HikariPool-1 - Start completed.
+08-Apr-2022 16:34:34 INFO - HHH000204: Processing PersistenceUnitInfo [name: default]
+08-Apr-2022 16:34:34 INFO - HHH000412: Hibernate ORM core version 5.6.3.Final
+08-Apr-2022 16:34:34 INFO - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+08-Apr-2022 16:34:34 INFO - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+08-Apr-2022 16:34:34 INFO - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+08-Apr-2022 16:34:34 INFO - Initialized JPA EntityManagerFactory for persistence unit 'default'
+08-Apr-2022 16:34:35 WARN - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+08-Apr-2022 16:34:35 INFO - LiveReload server is running on port 35729
+08-Apr-2022 16:34:35 INFO - Starting ProtocolHandler ["http-nio-8766"]
+08-Apr-2022 16:34:35 INFO - Tomcat started on port(s): 8766 (http) with context path ''
+08-Apr-2022 16:35:51 INFO - Initializing Spring DispatcherServlet 'dispatcherServlet'
+08-Apr-2022 16:35:51 INFO - Initializing Servlet 'dispatcherServlet'
+08-Apr-2022 16:35:51 INFO - Completed initialization in 0 ms
+08-Apr-2022 16:35:51 ERROR - Validation failed for argument [0] in public org.springframework.http.ResponseEntity<java.lang.String> com.infy.infyinterns.api.ProjectAllocationAPI.allocateProject(com.infy.infyinterns.dto.ProjectDTO) throws com.infy.infyinterns.exception.InfyInternException with 4 errors: [Field error in object 'projectDTO' on field 'releaseDate': rejected value [null]; codes [NotNull.projectDTO.releaseDate,NotNull.releaseDate,NotNull.java.time.LocalDate,NotNull]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [projectDTO.releaseDate,releaseDate]; arguments []; default message [releaseDate]]; default message [Please provide project release date ]] [Field error in object 'projectDTO' on field 'projectName': rejected value [null]; codes [NotNull.projectDTO.projectName,NotNull.projectName,NotNull.java.lang.String,NotNull]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [projectDTO.projectName,projectName]; arguments []; default message [projectName]]; default message [Please provide project name]] [Field error in object 'projectDTO' on field 'mentorDTO.mentorId': rejected value [null]; codes [NotNull.projectDTO.mentorDTO.mentorId,NotNull.mentorDTO.mentorId,NotNull.mentorId,NotNull.java.lang.Integer,NotNull]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [projectDTO.mentorDTO.mentorId,mentorDTO.mentorId]; arguments []; default message [mentorDTO.mentorId]]; default message [Please provide mentor id]] [Field error in object 'projectDTO' on field 'ideaOwner': rejected value [null]; codes [NotNull.projectDTO.ideaOwner,NotNull.ideaOwner,NotNull.java.lang.Integer,NotNull]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [projectDTO.ideaOwner,ideaOwner]; arguments []; default message [ideaOwner]]; default message [Please provide idea owner name]] 
+org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<java.lang.String> com.infy.infyinterns.api.ProjectAllocationAPI.allocateProject(com.infy.infyinterns.dto.ProjectDTO) throws com.infy.infyinterns.exception.InfyInternException with 4 errors: [Field error in object 'projectDTO' on field 'releaseDate': rejected value [null]; codes [NotNull.projectDTO.releaseDate,NotNull.releaseDate,NotNull.java.time.LocalDate,NotNull]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [projectDTO.releaseDate,releaseDate]; arguments []; default message [releaseDate]]; default message [Please provide project release date ]] [Field error in object 'projectDTO' on field 'projectName': rejected value [null]; codes [NotNull.projectDTO.projectName,NotNull.projectName,NotNull.java.lang.String,NotNull]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [projectDTO.projectName,projectName]; arguments []; default message [projectName]]; default message [Please provide project name]] [Field error in object 'projectDTO' on field 'mentorDTO.mentorId': rejected value [null]; codes [NotNull.projectDTO.mentorDTO.mentorId,NotNull.mentorDTO.mentorId,NotNull.mentorId,NotNull.java.lang.Integer,NotNull]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [projectDTO.mentorDTO.mentorId,mentorDTO.mentorId]; arguments []; default message [mentorDTO.mentorId]]; default message [Please provide mentor id]] [Field error in object 'projectDTO' on field 'ideaOwner': rejected value [null]; codes [NotNull.projectDTO.ideaOwner,NotNull.ideaOwner,NotNull.java.lang.Integer,NotNull]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [projectDTO.ideaOwner,ideaOwner]; arguments []; default message [ideaOwner]]; default message [Please provide idea owner name]] 
+	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.resolveArgument(RequestResponseBodyMethodProcessor.java:141) ~[spring-webmvc-5.3.14.jar:5.3.14]
+	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:121) ~[spring-web-5.3.14.jar:5.3.14]
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:179) ~[spring-web-5.3.14.jar:5.3.14]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:146) ~[spring-web-5.3.14.jar:5.3.14]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-5.3.14.jar:5.3.14]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895) ~[spring-webmvc-5.3.14.jar:5.3.14]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) ~[spring-webmvc-5.3.14.jar:5.3.14]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.3.14.jar:5.3.14]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067) [spring-webmvc-5.3.14.jar:5.3.14]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963) [spring-webmvc-5.3.14.jar:5.3.14]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) [spring-webmvc-5.3.14.jar:5.3.14]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909) [spring-webmvc-5.3.14.jar:5.3.14]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:681) [tomcat-embed-core-9.0.56.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) [spring-webmvc-5.3.14.jar:5.3.14]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764) [tomcat-embed-core-9.0.56.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) [tomcat-embed-websocket-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) [spring-web-5.3.14.jar:5.3.14]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) [spring-web-5.3.14.jar:5.3.14]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) [spring-web-5.3.14.jar:5.3.14]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) [spring-web-5.3.14.jar:5.3.14]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) [spring-web-5.3.14.jar:5.3.14]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) [spring-web-5.3.14.jar:5.3.14]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:895) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1732) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at java.lang.Thread.run(Thread.java:833) [?:?]
+08-Apr-2022 16:35:51 WARN - Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<java.lang.String> com.infy.infyinterns.api.ProjectAllocationAPI.allocateProject(com.infy.infyinterns.dto.ProjectDTO) throws com.infy.infyinterns.exception.InfyInternException with 4 errors: [Field error in object 'projectDTO' on field 'releaseDate': rejected value [null]; codes [NotNull.projectDTO.releaseDate,NotNull.releaseDate,NotNull.java.time.LocalDate,NotNull]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [projectDTO.releaseDate,releaseDate]; arguments []; default message [releaseDate]]; default message [Please provide project release date ]] [Field error in object 'projectDTO' on field 'projectName': rejected value [null]; codes [NotNull.projectDTO.projectName,NotNull.projectName,NotNull.java.lang.String,NotNull]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [projectDTO.projectName,projectName]; arguments []; default message [projectName]]; default message [Please provide project name]] [Field error in object 'projectDTO' on field 'mentorDTO.mentorId': rejected value [null]; codes [NotNull.projectDTO.mentorDTO.mentorId,NotNull.mentorDTO.mentorId,NotNull.mentorId,NotNull.java.lang.Integer,NotNull]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [projectDTO.mentorDTO.mentorId,mentorDTO.mentorId]; arguments []; default message [mentorDTO.mentorId]]; default message [Please provide mentor id]] [Field error in object 'projectDTO' on field 'ideaOwner': rejected value [null]; codes [NotNull.projectDTO.ideaOwner,NotNull.ideaOwner,NotNull.java.lang.Integer,NotNull]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [projectDTO.ideaOwner,ideaOwner]; arguments []; default message [ideaOwner]]; default message [Please provide idea owner name]] ]
+08-Apr-2022 16:36:07 ERROR - Validation failed for argument [0] in public org.springframework.http.ResponseEntity<java.lang.String> com.infy.infyinterns.api.ProjectAllocationAPI.allocateProject(com.infy.infyinterns.dto.ProjectDTO) throws com.infy.infyinterns.exception.InfyInternException: [Field error in object 'projectDTO' on field 'mentorDTO': rejected value [null]; codes [NotNull.projectDTO.mentorDTO,NotNull.mentorDTO,NotNull.com.infy.infyinterns.dto.MentorDTO,NotNull]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [projectDTO.mentorDTO,mentorDTO]; arguments []; default message [mentorDTO]]; default message [Please provide mentor details]] 
+org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<java.lang.String> com.infy.infyinterns.api.ProjectAllocationAPI.allocateProject(com.infy.infyinterns.dto.ProjectDTO) throws com.infy.infyinterns.exception.InfyInternException: [Field error in object 'projectDTO' on field 'mentorDTO': rejected value [null]; codes [NotNull.projectDTO.mentorDTO,NotNull.mentorDTO,NotNull.com.infy.infyinterns.dto.MentorDTO,NotNull]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [projectDTO.mentorDTO,mentorDTO]; arguments []; default message [mentorDTO]]; default message [Please provide mentor details]] 
+	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.resolveArgument(RequestResponseBodyMethodProcessor.java:141) ~[spring-webmvc-5.3.14.jar:5.3.14]
+	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:121) ~[spring-web-5.3.14.jar:5.3.14]
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:179) ~[spring-web-5.3.14.jar:5.3.14]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:146) ~[spring-web-5.3.14.jar:5.3.14]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-5.3.14.jar:5.3.14]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895) ~[spring-webmvc-5.3.14.jar:5.3.14]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) ~[spring-webmvc-5.3.14.jar:5.3.14]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.3.14.jar:5.3.14]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067) [spring-webmvc-5.3.14.jar:5.3.14]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963) [spring-webmvc-5.3.14.jar:5.3.14]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) [spring-webmvc-5.3.14.jar:5.3.14]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909) [spring-webmvc-5.3.14.jar:5.3.14]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:681) [tomcat-embed-core-9.0.56.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) [spring-webmvc-5.3.14.jar:5.3.14]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764) [tomcat-embed-core-9.0.56.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) [tomcat-embed-websocket-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) [spring-web-5.3.14.jar:5.3.14]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) [spring-web-5.3.14.jar:5.3.14]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) [spring-web-5.3.14.jar:5.3.14]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) [spring-web-5.3.14.jar:5.3.14]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) [spring-web-5.3.14.jar:5.3.14]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) [spring-web-5.3.14.jar:5.3.14]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:895) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1732) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at java.lang.Thread.run(Thread.java:833) [?:?]
+08-Apr-2022 16:36:07 WARN - Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<java.lang.String> com.infy.infyinterns.api.ProjectAllocationAPI.allocateProject(com.infy.infyinterns.dto.ProjectDTO) throws com.infy.infyinterns.exception.InfyInternException: [Field error in object 'projectDTO' on field 'mentorDTO': rejected value [null]; codes [NotNull.projectDTO.mentorDTO,NotNull.mentorDTO,NotNull.com.infy.infyinterns.dto.MentorDTO,NotNull]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [projectDTO.mentorDTO,mentorDTO]; arguments []; default message [mentorDTO]]; default message [Please provide mentor details]] ]
+08-Apr-2022 16:36:36 ERROR - Validation failed for argument [0] in public org.springframework.http.ResponseEntity<java.lang.String> com.infy.infyinterns.api.ProjectAllocationAPI.allocateProject(com.infy.infyinterns.dto.ProjectDTO) throws com.infy.infyinterns.exception.InfyInternException: [Field error in object 'projectDTO' on field 'mentorDTO.mentorId': rejected value [10090]; codes [Max.projectDTO.mentorDTO.mentorId,Max.mentorDTO.mentorId,Max.mentorId,Max.java.lang.Integer,Max]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [projectDTO.mentorDTO.mentorId,mentorDTO.mentorId]; arguments []; default message [mentorDTO.mentorId],9999]; default message [Mentor id should be of 4 digits]] 
+org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<java.lang.String> com.infy.infyinterns.api.ProjectAllocationAPI.allocateProject(com.infy.infyinterns.dto.ProjectDTO) throws com.infy.infyinterns.exception.InfyInternException: [Field error in object 'projectDTO' on field 'mentorDTO.mentorId': rejected value [10090]; codes [Max.projectDTO.mentorDTO.mentorId,Max.mentorDTO.mentorId,Max.mentorId,Max.java.lang.Integer,Max]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [projectDTO.mentorDTO.mentorId,mentorDTO.mentorId]; arguments []; default message [mentorDTO.mentorId],9999]; default message [Mentor id should be of 4 digits]] 
+	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.resolveArgument(RequestResponseBodyMethodProcessor.java:141) ~[spring-webmvc-5.3.14.jar:5.3.14]
+	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:121) ~[spring-web-5.3.14.jar:5.3.14]
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:179) ~[spring-web-5.3.14.jar:5.3.14]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:146) ~[spring-web-5.3.14.jar:5.3.14]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-5.3.14.jar:5.3.14]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895) ~[spring-webmvc-5.3.14.jar:5.3.14]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) ~[spring-webmvc-5.3.14.jar:5.3.14]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.3.14.jar:5.3.14]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067) [spring-webmvc-5.3.14.jar:5.3.14]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963) [spring-webmvc-5.3.14.jar:5.3.14]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) [spring-webmvc-5.3.14.jar:5.3.14]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909) [spring-webmvc-5.3.14.jar:5.3.14]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:681) [tomcat-embed-core-9.0.56.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) [spring-webmvc-5.3.14.jar:5.3.14]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764) [tomcat-embed-core-9.0.56.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) [tomcat-embed-websocket-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) [spring-web-5.3.14.jar:5.3.14]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) [spring-web-5.3.14.jar:5.3.14]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) [spring-web-5.3.14.jar:5.3.14]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) [spring-web-5.3.14.jar:5.3.14]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) [spring-web-5.3.14.jar:5.3.14]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) [spring-web-5.3.14.jar:5.3.14]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:895) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1732) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at java.lang.Thread.run(Thread.java:833) [?:?]
+08-Apr-2022 16:36:36 WARN - Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<java.lang.String> com.infy.infyinterns.api.ProjectAllocationAPI.allocateProject(com.infy.infyinterns.dto.ProjectDTO) throws com.infy.infyinterns.exception.InfyInternException: [Field error in object 'projectDTO' on field 'mentorDTO.mentorId': rejected value [10090]; codes [Max.projectDTO.mentorDTO.mentorId,Max.mentorDTO.mentorId,Max.mentorId,Max.java.lang.Integer,Max]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [projectDTO.mentorDTO.mentorId,mentorDTO.mentorId]; arguments []; default message [mentorDTO.mentorId],9999]; default message [Mentor id should be of 4 digits]] ]
+08-Apr-2022 16:36:49 ERROR - Validation failed for argument [0] in public org.springframework.http.ResponseEntity<java.lang.String> com.infy.infyinterns.api.ProjectAllocationAPI.allocateProject(com.infy.infyinterns.dto.ProjectDTO) throws com.infy.infyinterns.exception.InfyInternException: [Field error in object 'projectDTO' on field 'mentorDTO.mentorId': rejected value [100]; codes [Min.projectDTO.mentorDTO.mentorId,Min.mentorDTO.mentorId,Min.mentorId,Min.java.lang.Integer,Min]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [projectDTO.mentorDTO.mentorId,mentorDTO.mentorId]; arguments []; default message [mentorDTO.mentorId],1000]; default message [Mentor id should be of 4 digits]] 
+org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<java.lang.String> com.infy.infyinterns.api.ProjectAllocationAPI.allocateProject(com.infy.infyinterns.dto.ProjectDTO) throws com.infy.infyinterns.exception.InfyInternException: [Field error in object 'projectDTO' on field 'mentorDTO.mentorId': rejected value [100]; codes [Min.projectDTO.mentorDTO.mentorId,Min.mentorDTO.mentorId,Min.mentorId,Min.java.lang.Integer,Min]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [projectDTO.mentorDTO.mentorId,mentorDTO.mentorId]; arguments []; default message [mentorDTO.mentorId],1000]; default message [Mentor id should be of 4 digits]] 
+	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.resolveArgument(RequestResponseBodyMethodProcessor.java:141) ~[spring-webmvc-5.3.14.jar:5.3.14]
+	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:121) ~[spring-web-5.3.14.jar:5.3.14]
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:179) ~[spring-web-5.3.14.jar:5.3.14]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:146) ~[spring-web-5.3.14.jar:5.3.14]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-5.3.14.jar:5.3.14]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895) ~[spring-webmvc-5.3.14.jar:5.3.14]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) ~[spring-webmvc-5.3.14.jar:5.3.14]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.3.14.jar:5.3.14]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067) [spring-webmvc-5.3.14.jar:5.3.14]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963) [spring-webmvc-5.3.14.jar:5.3.14]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) [spring-webmvc-5.3.14.jar:5.3.14]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909) [spring-webmvc-5.3.14.jar:5.3.14]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:681) [tomcat-embed-core-9.0.56.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) [spring-webmvc-5.3.14.jar:5.3.14]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764) [tomcat-embed-core-9.0.56.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) [tomcat-embed-websocket-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) [spring-web-5.3.14.jar:5.3.14]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) [spring-web-5.3.14.jar:5.3.14]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) [spring-web-5.3.14.jar:5.3.14]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) [spring-web-5.3.14.jar:5.3.14]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) [spring-web-5.3.14.jar:5.3.14]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) [spring-web-5.3.14.jar:5.3.14]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:895) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1732) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at java.lang.Thread.run(Thread.java:833) [?:?]
+08-Apr-2022 16:36:49 WARN - Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<java.lang.String> com.infy.infyinterns.api.ProjectAllocationAPI.allocateProject(com.infy.infyinterns.dto.ProjectDTO) throws com.infy.infyinterns.exception.InfyInternException: [Field error in object 'projectDTO' on field 'mentorDTO.mentorId': rejected value [100]; codes [Min.projectDTO.mentorDTO.mentorId,Min.mentorDTO.mentorId,Min.mentorId,Min.java.lang.Integer,Min]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [projectDTO.mentorDTO.mentorId,mentorDTO.mentorId]; arguments []; default message [mentorDTO.mentorId],1000]; default message [Mentor id should be of 4 digits]] ]
+08-Apr-2022 16:37:20 ERROR - Service.MENTOR_NOT_FOUND
+com.infy.infyinterns.exception.InfyInternException: Service.MENTOR_NOT_FOUND
+	at com.infy.infyinterns.service.ProjectAllocationServiceImpl.lambda$0(ProjectAllocationServiceImpl.java:33) ~[classes/:?]
+	at java.util.Optional.orElseThrow(Optional.java:403) ~[?:?]
+	at com.infy.infyinterns.service.ProjectAllocationServiceImpl.allocateProject(ProjectAllocationServiceImpl.java:33) ~[classes/:?]
+	at com.infy.infyinterns.service.ProjectAllocationServiceImpl$$FastClassBySpringCGLIB$$88866543.invoke(<generated>) ~[classes/:?]
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218) ~[spring-core-5.3.14.jar:5.3.14]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:783) ~[spring-aop-5.3.14.jar:5.3.14]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.3.14.jar:5.3.14]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:753) ~[spring-aop-5.3.14.jar:5.3.14]
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123) ~[spring-tx-5.3.14.jar:5.3.14]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:388) ~[spring-tx-5.3.14.jar:5.3.14]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119) ~[spring-tx-5.3.14.jar:5.3.14]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.14.jar:5.3.14]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:753) ~[spring-aop-5.3.14.jar:5.3.14]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:698) ~[spring-aop-5.3.14.jar:5.3.14]
+	at com.infy.infyinterns.service.ProjectAllocationServiceImpl$$EnhancerBySpringCGLIB$$d5465b54.allocateProject(<generated>) ~[classes/:?]
+	at com.infy.infyinterns.api.ProjectAllocationAPI.allocateProject(ProjectAllocationAPI.java:44) ~[classes/:?]
+	at com.infy.infyinterns.api.ProjectAllocationAPI$$FastClassBySpringCGLIB$$9a0ba3a3.invoke(<generated>) ~[classes/:?]
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218) ~[spring-core-5.3.14.jar:5.3.14]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:783) ~[spring-aop-5.3.14.jar:5.3.14]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.3.14.jar:5.3.14]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:753) ~[spring-aop-5.3.14.jar:5.3.14]
+	at org.springframework.validation.beanvalidation.MethodValidationInterceptor.invoke(MethodValidationInterceptor.java:123) ~[spring-context-5.3.14.jar:5.3.14]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.14.jar:5.3.14]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:753) ~[spring-aop-5.3.14.jar:5.3.14]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:698) ~[spring-aop-5.3.14.jar:5.3.14]
+	at com.infy.infyinterns.api.ProjectAllocationAPI$$EnhancerBySpringCGLIB$$72c60a5a.allocateProject(<generated>) ~[classes/:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:568) ~[?:?]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205) ~[spring-web-5.3.14.jar:5.3.14]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150) ~[spring-web-5.3.14.jar:5.3.14]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-5.3.14.jar:5.3.14]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895) ~[spring-webmvc-5.3.14.jar:5.3.14]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) ~[spring-webmvc-5.3.14.jar:5.3.14]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.3.14.jar:5.3.14]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067) [spring-webmvc-5.3.14.jar:5.3.14]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963) [spring-webmvc-5.3.14.jar:5.3.14]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) [spring-webmvc-5.3.14.jar:5.3.14]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909) [spring-webmvc-5.3.14.jar:5.3.14]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:681) [tomcat-embed-core-9.0.56.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) [spring-webmvc-5.3.14.jar:5.3.14]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764) [tomcat-embed-core-9.0.56.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) [tomcat-embed-websocket-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) [spring-web-5.3.14.jar:5.3.14]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) [spring-web-5.3.14.jar:5.3.14]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) [spring-web-5.3.14.jar:5.3.14]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) [spring-web-5.3.14.jar:5.3.14]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) [spring-web-5.3.14.jar:5.3.14]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) [spring-web-5.3.14.jar:5.3.14]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:895) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1732) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at java.lang.Thread.run(Thread.java:833) [?:?]
+08-Apr-2022 16:37:20 WARN - Resolved [com.infy.infyinterns.exception.InfyInternException: Service.MENTOR_NOT_FOUND]
+08-Apr-2022 16:43:19 ERROR - Request method 'PUT' not supported
+org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'PUT' not supported
+	at org.springframework.web.servlet.mvc.method.RequestMappingInfoHandlerMapping.handleNoMatch(RequestMappingInfoHandlerMapping.java:253) ~[spring-webmvc-5.3.14.jar:5.3.14]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lookupHandlerMethod(AbstractHandlerMethodMapping.java:442) ~[spring-webmvc-5.3.14.jar:5.3.14]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.getHandlerInternal(AbstractHandlerMethodMapping.java:383) ~[spring-webmvc-5.3.14.jar:5.3.14]
+	at org.springframework.web.servlet.mvc.method.RequestMappingInfoHandlerMapping.getHandlerInternal(RequestMappingInfoHandlerMapping.java:125) ~[spring-webmvc-5.3.14.jar:5.3.14]
+	at org.springframework.web.servlet.mvc.method.RequestMappingInfoHandlerMapping.getHandlerInternal(RequestMappingInfoHandlerMapping.java:67) ~[spring-webmvc-5.3.14.jar:5.3.14]
+	at org.springframework.web.servlet.handler.AbstractHandlerMapping.getHandler(AbstractHandlerMapping.java:498) ~[spring-webmvc-5.3.14.jar:5.3.14]
+	at org.springframework.web.servlet.DispatcherServlet.getHandler(DispatcherServlet.java:1261) [spring-webmvc-5.3.14.jar:5.3.14]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1043) [spring-webmvc-5.3.14.jar:5.3.14]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963) [spring-webmvc-5.3.14.jar:5.3.14]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) [spring-webmvc-5.3.14.jar:5.3.14]
+	at org.springframework.web.servlet.FrameworkServlet.doPut(FrameworkServlet.java:920) [spring-webmvc-5.3.14.jar:5.3.14]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:684) [tomcat-embed-core-9.0.56.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) [spring-webmvc-5.3.14.jar:5.3.14]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764) [tomcat-embed-core-9.0.56.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) [tomcat-embed-websocket-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) [spring-web-5.3.14.jar:5.3.14]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) [spring-web-5.3.14.jar:5.3.14]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) [spring-web-5.3.14.jar:5.3.14]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) [spring-web-5.3.14.jar:5.3.14]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) [spring-web-5.3.14.jar:5.3.14]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) [spring-web-5.3.14.jar:5.3.14]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:895) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1732) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.56.jar:9.0.56]
+	at java.lang.Thread.run(Thread.java:833) [?:?]
+08-Apr-2022 16:43:19 WARN - Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'PUT' not supported]
+10-Apr-2022 01:57:37 INFO - HV000001: Hibernate Validator 6.2.0.Final
+10-Apr-2022 01:57:37 INFO - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+10-Apr-2022 01:57:37 INFO - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+10-Apr-2022 01:57:38 INFO - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+10-Apr-2022 01:57:38 INFO - Finished Spring Data repository scanning in 59 ms. Found 2 JPA repository interfaces.
+10-Apr-2022 01:57:39 INFO - Tomcat initialized with port(s): 8766 (http)
+10-Apr-2022 01:57:39 INFO - Initializing ProtocolHandler ["http-nio-8766"]
+10-Apr-2022 01:57:39 INFO - Starting service [Tomcat]
+10-Apr-2022 01:57:39 INFO - Starting Servlet engine: [Apache Tomcat/9.0.56]
+10-Apr-2022 01:57:39 INFO - Initializing Spring embedded WebApplicationContext
+10-Apr-2022 01:57:39 INFO - Root WebApplicationContext: initialization completed in 1870 ms
+10-Apr-2022 01:57:39 INFO - HikariPool-1 - Starting...
+10-Apr-2022 01:57:40 INFO - HikariPool-1 - Start completed.
+10-Apr-2022 01:57:40 INFO - HHH000204: Processing PersistenceUnitInfo [name: default]
+10-Apr-2022 01:57:40 INFO - HHH000412: Hibernate ORM core version 5.6.3.Final
+10-Apr-2022 01:57:40 INFO - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+10-Apr-2022 01:57:40 INFO - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+10-Apr-2022 01:57:41 INFO - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+10-Apr-2022 01:57:41 INFO - Initialized JPA EntityManagerFactory for persistence unit 'default'
+10-Apr-2022 01:57:41 WARN - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+10-Apr-2022 01:57:42 INFO - LiveReload server is running on port 35729
+10-Apr-2022 01:57:42 INFO - Starting ProtocolHandler ["http-nio-8766"]
+10-Apr-2022 01:57:42 INFO - Tomcat started on port(s): 8766 (http) with context path ''
+10-Apr-2022 01:58:04 INFO - HV000001: Hibernate Validator 6.2.0.Final
+10-Apr-2022 01:58:04 INFO - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+10-Apr-2022 01:58:04 INFO - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+10-Apr-2022 01:58:04 INFO - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+10-Apr-2022 01:58:04 INFO - Finished Spring Data repository scanning in 45 ms. Found 2 JPA repository interfaces.
+10-Apr-2022 01:58:05 INFO - Tomcat initialized with port(s): 8766 (http)
+10-Apr-2022 01:58:05 INFO - Initializing ProtocolHandler ["http-nio-8766"]
+10-Apr-2022 01:58:05 INFO - Starting service [Tomcat]
+10-Apr-2022 01:58:05 INFO - Starting Servlet engine: [Apache Tomcat/9.0.56]
+10-Apr-2022 01:58:05 INFO - Initializing Spring embedded WebApplicationContext
+10-Apr-2022 01:58:05 INFO - Root WebApplicationContext: initialization completed in 1122 ms
+10-Apr-2022 01:58:05 INFO - HikariPool-1 - Starting...
+10-Apr-2022 01:58:05 INFO - HikariPool-1 - Start completed.
+10-Apr-2022 01:58:05 INFO - HHH000204: Processing PersistenceUnitInfo [name: default]
+10-Apr-2022 01:58:05 INFO - HHH000412: Hibernate ORM core version 5.6.3.Final
+10-Apr-2022 01:58:05 INFO - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+10-Apr-2022 01:58:06 INFO - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+10-Apr-2022 01:58:06 INFO - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+10-Apr-2022 01:58:06 INFO - Initialized JPA EntityManagerFactory for persistence unit 'default'
+10-Apr-2022 01:58:06 WARN - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+10-Apr-2022 01:58:07 INFO - LiveReload server is running on port 35729
+10-Apr-2022 01:58:07 INFO - Starting ProtocolHandler ["http-nio-8766"]
+10-Apr-2022 01:58:07 INFO - Tomcat started on port(s): 8766 (http) with context path ''
+10-Apr-2022 02:26:18 INFO - HV000001: Hibernate Validator 6.2.0.Final
+10-Apr-2022 02:26:18 INFO - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+10-Apr-2022 02:26:18 INFO - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+10-Apr-2022 02:26:18 INFO - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+10-Apr-2022 02:26:18 INFO - Finished Spring Data repository scanning in 44 ms. Found 2 JPA repository interfaces.
+10-Apr-2022 02:26:19 INFO - Tomcat initialized with port(s): 8766 (http)
+10-Apr-2022 02:26:19 INFO - Initializing ProtocolHandler ["http-nio-8766"]
+10-Apr-2022 02:26:19 INFO - Starting service [Tomcat]
+10-Apr-2022 02:26:19 INFO - Starting Servlet engine: [Apache Tomcat/9.0.56]
+10-Apr-2022 02:26:19 INFO - Initializing Spring embedded WebApplicationContext
+10-Apr-2022 02:26:19 INFO - Root WebApplicationContext: initialization completed in 1142 ms
+10-Apr-2022 02:26:19 INFO - HikariPool-1 - Starting...
+10-Apr-2022 02:26:19 INFO - HikariPool-1 - Start completed.
+10-Apr-2022 02:26:19 INFO - HHH000204: Processing PersistenceUnitInfo [name: default]
+10-Apr-2022 02:26:19 INFO - HHH000412: Hibernate ORM core version 5.6.3.Final
+10-Apr-2022 02:26:20 INFO - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+10-Apr-2022 02:26:20 INFO - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+10-Apr-2022 02:26:20 INFO - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+10-Apr-2022 02:26:20 INFO - Initialized JPA EntityManagerFactory for persistence unit 'default'
+10-Apr-2022 02:26:20 WARN - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+10-Apr-2022 02:26:21 INFO - LiveReload server is running on port 35729
+10-Apr-2022 02:26:21 INFO - Starting ProtocolHandler ["http-nio-8766"]
+10-Apr-2022 02:26:21 INFO - Tomcat started on port(s): 8766 (http) with context path ''
+10-Apr-2022 02:33:48 INFO - HV000001: Hibernate Validator 6.2.0.Final
+10-Apr-2022 02:33:48 INFO - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+10-Apr-2022 02:33:48 INFO - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+10-Apr-2022 02:33:48 INFO - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+10-Apr-2022 02:33:48 INFO - Finished Spring Data repository scanning in 61 ms. Found 2 JPA repository interfaces.
+10-Apr-2022 02:33:49 INFO - Tomcat initialized with port(s): 8766 (http)
+10-Apr-2022 02:33:49 INFO - Initializing ProtocolHandler ["http-nio-8766"]
+10-Apr-2022 02:33:49 INFO - Starting service [Tomcat]
+10-Apr-2022 02:33:49 INFO - Starting Servlet engine: [Apache Tomcat/9.0.56]
+10-Apr-2022 02:33:49 INFO - Initializing Spring embedded WebApplicationContext
+10-Apr-2022 02:33:49 INFO - Root WebApplicationContext: initialization completed in 1277 ms
+10-Apr-2022 02:33:49 INFO - HikariPool-1 - Starting...
+10-Apr-2022 02:33:49 INFO - HikariPool-1 - Start completed.
+10-Apr-2022 02:33:49 INFO - HHH000204: Processing PersistenceUnitInfo [name: default]
+10-Apr-2022 02:33:49 INFO - HHH000412: Hibernate ORM core version 5.6.3.Final
+10-Apr-2022 02:33:49 INFO - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+10-Apr-2022 02:33:50 INFO - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+10-Apr-2022 02:33:50 INFO - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+10-Apr-2022 02:33:50 INFO - Initialized JPA EntityManagerFactory for persistence unit 'default'
+10-Apr-2022 02:33:50 WARN - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+10-Apr-2022 02:33:51 INFO - LiveReload server is running on port 35729
+10-Apr-2022 02:33:51 INFO - Starting ProtocolHandler ["http-nio-8766"]
+10-Apr-2022 02:33:51 INFO - Tomcat started on port(s): 8766 (http) with context path ''
+11-Apr-2022 13:26:30 INFO - HV000001: Hibernate Validator 6.2.0.Final
+11-Apr-2022 13:26:30 INFO - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+11-Apr-2022 13:26:30 INFO - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+11-Apr-2022 13:26:31 INFO - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+11-Apr-2022 13:26:31 INFO - Finished Spring Data repository scanning in 44 ms. Found 2 JPA repository interfaces.
+11-Apr-2022 13:26:31 INFO - Tomcat initialized with port(s): 8766 (http)
+11-Apr-2022 13:26:31 INFO - Initializing ProtocolHandler ["http-nio-8766"]
+11-Apr-2022 13:26:31 INFO - Starting service [Tomcat]
+11-Apr-2022 13:26:31 INFO - Starting Servlet engine: [Apache Tomcat/9.0.56]
+11-Apr-2022 13:26:31 INFO - Initializing Spring embedded WebApplicationContext
+11-Apr-2022 13:26:31 INFO - Root WebApplicationContext: initialization completed in 1255 ms
+11-Apr-2022 13:26:32 INFO - HikariPool-1 - Starting...
+11-Apr-2022 13:26:32 INFO - HikariPool-1 - Start completed.
+11-Apr-2022 13:26:32 INFO - HHH000204: Processing PersistenceUnitInfo [name: default]
+11-Apr-2022 13:26:32 INFO - HHH000412: Hibernate ORM core version 5.6.3.Final
+11-Apr-2022 13:26:32 INFO - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+11-Apr-2022 13:26:32 INFO - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+11-Apr-2022 13:26:33 INFO - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+11-Apr-2022 13:26:33 INFO - Initialized JPA EntityManagerFactory for persistence unit 'default'
+11-Apr-2022 13:26:33 WARN - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+11-Apr-2022 13:26:33 INFO - LiveReload server is running on port 35729
+11-Apr-2022 13:26:33 INFO - Starting ProtocolHandler ["http-nio-8766"]
+11-Apr-2022 13:26:33 INFO - Tomcat started on port(s): 8766 (http) with context path ''
+11-Apr-2022 13:47:29 INFO - Closing JPA EntityManagerFactory for persistence unit 'default'
+11-Apr-2022 13:47:29 INFO - HikariPool-1 - Shutdown initiated...
+11-Apr-2022 13:47:29 INFO - HikariPool-1 - Shutdown completed.
+11-Apr-2022 13:47:30 INFO - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+11-Apr-2022 13:47:30 INFO - Finished Spring Data repository scanning in 13 ms. Found 2 JPA repository interfaces.
+11-Apr-2022 13:47:30 INFO - Tomcat initialized with port(s): 8766 (http)
+11-Apr-2022 13:47:30 INFO - Initializing ProtocolHandler ["http-nio-8766"]
+11-Apr-2022 13:47:30 INFO - Starting service [Tomcat]
+11-Apr-2022 13:47:30 INFO - Starting Servlet engine: [Apache Tomcat/9.0.56]
+11-Apr-2022 13:47:30 INFO - Initializing Spring embedded WebApplicationContext
+11-Apr-2022 13:47:30 INFO - Root WebApplicationContext: initialization completed in 271 ms
+11-Apr-2022 13:47:30 INFO - HikariPool-2 - Starting...
+11-Apr-2022 13:47:30 INFO - HikariPool-2 - Start completed.
+11-Apr-2022 13:47:30 INFO - HHH000204: Processing PersistenceUnitInfo [name: default]
+11-Apr-2022 13:47:30 INFO - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+11-Apr-2022 13:47:30 INFO - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+11-Apr-2022 13:47:30 INFO - Initialized JPA EntityManagerFactory for persistence unit 'default'
+11-Apr-2022 13:47:30 WARN - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+11-Apr-2022 13:47:30 INFO - LiveReload server is running on port 35729
+11-Apr-2022 13:47:30 INFO - Starting ProtocolHandler ["http-nio-8766"]
+11-Apr-2022 13:47:30 INFO - Tomcat started on port(s): 8766 (http) with context path ''
+11-Apr-2022 13:47:30 INFO - Condition evaluation unchanged
+20-Apr-2022 23:55:23 INFO - HV000001: Hibernate Validator 6.2.0.Final
+20-Apr-2022 23:55:23 INFO - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+20-Apr-2022 23:55:23 INFO - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+20-Apr-2022 23:55:24 INFO - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+20-Apr-2022 23:55:24 INFO - Finished Spring Data repository scanning in 38 ms. Found 2 JPA repository interfaces.
+20-Apr-2022 23:55:24 INFO - Tomcat initialized with port(s): 8766 (http)
+20-Apr-2022 23:55:24 INFO - Initializing ProtocolHandler ["http-nio-8766"]
+20-Apr-2022 23:55:24 INFO - Starting service [Tomcat]
+20-Apr-2022 23:55:24 INFO - Starting Servlet engine: [Apache Tomcat/9.0.56]
+20-Apr-2022 23:55:24 INFO - Initializing Spring embedded WebApplicationContext
+20-Apr-2022 23:55:24 INFO - Root WebApplicationContext: initialization completed in 1124 ms
+20-Apr-2022 23:55:24 INFO - HikariPool-1 - Starting...
+20-Apr-2022 23:55:25 INFO - HikariPool-1 - Start completed.
+20-Apr-2022 23:55:25 INFO - HHH000204: Processing PersistenceUnitInfo [name: default]
+20-Apr-2022 23:55:25 INFO - HHH000412: Hibernate ORM core version 5.6.3.Final
+20-Apr-2022 23:55:25 INFO - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+20-Apr-2022 23:55:25 INFO - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+20-Apr-2022 23:55:26 INFO - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+20-Apr-2022 23:55:26 INFO - Initialized JPA EntityManagerFactory for persistence unit 'default'
+20-Apr-2022 23:55:26 WARN - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+20-Apr-2022 23:55:26 INFO - LiveReload server is running on port 35729
+20-Apr-2022 23:55:26 INFO - Starting ProtocolHandler ["http-nio-8766"]
+20-Apr-2022 23:55:26 INFO - Tomcat started on port(s): 8766 (http) with context path ''
+20-Apr-2022 23:55:31 INFO - Application shutdown requested.
+20-Apr-2022 23:55:31 INFO - Closing JPA EntityManagerFactory for persistence unit 'default'
+20-Apr-2022 23:55:31 INFO - HikariPool-1 - Shutdown initiated...
+20-Apr-2022 23:55:31 INFO - HikariPool-1 - Shutdown completed.
